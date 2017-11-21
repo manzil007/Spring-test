@@ -9,6 +9,6 @@ EXPOSE 80 5000 22
 RUN mkdir -p /opt/apps
 WORKDIR /opt/app/
 #COPY ${WORKSPACE}/target/*.war /opt/apps
-COPY sample.war /opt/apps
+COPY /opt/app/sample.war /opt/apps
 
 CMD "java -jar /opt/apps/*.war && while True; do sleep 1000; done"
