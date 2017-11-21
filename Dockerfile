@@ -12,4 +12,4 @@ WORKDIR /opt/app/
 COPY "sample.war /opt/apps"
 
 #CMD "java -jar /opt/apps/*.war && while True; do sleep 1000; done"
-CMD "java -jar /opt/apps/sample.war"
+CMD ["java","-jar /opt/apps/sample.war"]
