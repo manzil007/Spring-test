@@ -8,4 +8,4 @@ EXPOSE 80 5000 22
 RUN mkdir -p /opt/apps
 COPY ${WORKSPACE}/target/*.war /opt/apps
 
-RUN "java -jar /opt/apps/*.war && while True; do sleep 1000; done"
+CMD "java -jar /opt/apps/*.war && while True; do sleep 1000; done"
