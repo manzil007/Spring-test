@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y default-jdk default-jre
 EXPOSE 80 5000 22
 
 RUN mkdir -p /opt/apps
-#WORKDIR ${WORKSPACE}/target/
+WORKDIR /opt/app/
 #COPY ${WORKSPACE}/target/*.war /opt/apps
 COPY *.war /opt/apps
 
