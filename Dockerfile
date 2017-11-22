@@ -14,4 +14,4 @@ WORKDIR /
 COPY "sample.war /sample.war"
 
 #CMD "java -jar /opt/apps/*.war && while True; do sleep 1000; done"
-CMD ["java","-jar sample.war"]
+ENTRYPOINT ["java","-jar sample.war"]
