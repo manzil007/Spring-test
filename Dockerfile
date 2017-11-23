@@ -14,5 +14,5 @@ WORKDIR /
 COPY "sample.war /sample.war"
 
 #CMD "java -jar /opt/apps/*.war && while True; do sleep 1000; done"
-#ENTRYPOINT exec "java -jar sample.war"
-CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
+CMD /bin/bash "java -jar sample.war"
+#CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
