@@ -12,7 +12,8 @@ WORKDIR /
 #COPY ${WORKSPACE}/target/*.war /opt/apps
 #COPY "sample.war /opt/apps"
 COPY "sample.war /sample.war"
+COPY "javasample.sh /javasample.sh"
 
 #CMD "java -jar /opt/apps/*.war && while True; do sleep 1000; done"
-CMD /bin/bash "java -jar sample.war"
 #CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
+ENTRYPOINT ["/javasample.sh"]
