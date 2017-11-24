@@ -16,4 +16,5 @@ COPY "javasample.sh /javasample.sh"
 
 #CMD "java -jar /opt/apps/*.war && while True; do sleep 1000; done"
 #CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
-ENTRYPOINT ["/javasample.sh"]
+#ENTRYPOINT ["/javasample.sh"]
+CMD /bin/bash -c "java -jar /sample.war"
