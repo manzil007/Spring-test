@@ -1,0 +1,15 @@
+version: '2'
+services:
+  app1:
+    image: manzil007/springapp 
+    ports:
+      - "8080:8080"
+  app2:
+    image: manzil007/springapp
+    ports:
+      - "8081:8080"
+
+  nginx:
+    image: manzil007/lbnginx
+    ports:
+      - "80:80"
